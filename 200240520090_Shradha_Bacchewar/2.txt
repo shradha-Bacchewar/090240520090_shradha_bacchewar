@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+
+        body{
+            background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            
+        }
+        .FlexContainer{
+            margin: auto;
+            width:400px;
+            height:400px;
+            background-color: rgba(224, 209, 209,0.5);
+            display: flex;
+            border: 2px solid black; 
+            text-align: center; 
+            
+              
+        }
+
+        .LoginForm{
+            margin: auto;
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            font-weight: 800;
+            border-radius: 2px;
+        }
+
+        .LoginForm form{
+            margin-top: 30px; 
+            text-align: center;      
+        }
+
+    </style>
+</head>
+<body>
+    <div class="FlexContainer">
+        <div class="LoginForm">
+        <form name = LoginForm>
+            <h2> LoginForm</h2>
+
+                Username : <input type="text" name="Uname" id="UserName" value=""> <br></br>
+                Password: <input type="password" name="pwd" id="Password" value=""><br></br>
+                <input type="checkbox">
+
+                RememberMe <input type="button" name ="btn" value="Log-In" onclick="validation()">
+
+                
+            </form>
+        </div>
+    </div>
+
+    <script languag = "JavaScript" type="text/JavaScript">
+
+    function validation(){
+        
+        var Uname = document.getElementById("UserName").value;
+        var pwd = document.getElementById("Password").value;
+
+       if (Uname == '' || pwd == '')
+       {
+        alert("Please Enter Username and Password.");
+       }
+       
+        else if("Uname.legth < 3 || Uname.length > 10") 
+        {
+            alert("Username Must be 3 to 10 Characters");
+        }
+        else if("pwd.length < 3 || pwd.length >10")
+        {
+            alert("Password must be 3 to 10 characters");
+        }
+        else
+        {
+            alert("Thank You For LogIn");
+        }
+       }   
+                 
+    </script>
+</body>
+</html>
